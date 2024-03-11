@@ -24,4 +24,10 @@ Q1 is a basic task, we used some libraries like pandas and nltk, as well as spec
 3. At last, we save the preprocessed data into a new file.
 
 
-Q2
+Q2 is a NLP task, we use pandas, nltk and scikit-learn for this task.
+1. We preprocessed the data like Q1 and use PorterStemmer from nltk to process the word stemming.
+2. Then we did the feature extraction and text classification. I utilized the TfidfVectorizer from scikit-learn to convert the text data into a matrix of TF-IDF features and splited the data into training and testing sets using the train_test_split function. we use a Multinomial Naive Bayes classifier to train a model on the training data and make predictions on the test data.
+3. We evaluate our model by using the accuracy_score fuction and print the result and report.
+
+Here is the result of 1st Version.
+
