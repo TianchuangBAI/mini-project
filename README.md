@@ -39,3 +39,8 @@ Q3 we have two tasks, the first one is visualize and interpret the topic classif
 
 After the fine-tuning of the model, we have the 2nd Version result.
 ![result](https://github.com/TianchuangBAI/mini-project/blob/383ce87fd95de593afb433fc212d9dedfc465475/pics/Q4.jpg)
+
+Q4 is a machine learning task to find out which feature is the closed feature to salary or payment.
+I used the TfidfVectorizer to process the text, X = review_pros and y = job_category.
+Then we use chi2_score to calculate the relationship between X and y. Topic most correlated with income/wage/salary: research.
+![result](https://github.com/TianchuangBAI/mini-project/blob/3be059149bd6fd181320654fba210445c09909db/pics/Q5.png)
