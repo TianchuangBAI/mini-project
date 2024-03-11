@@ -33,4 +33,4 @@ Here is the result of 1st Version.
 ![result](https://github.com/TianchuangBAI/mini-project/blob/ce5228d9fb706454e05fa9267fc573eccf5f4dc0/pics/Q2.jpg)
 
 Q3 we have two tasks, the first one is visualize and interpret the topic classification result. The second one is improve the accuracy of the topic detction.
-![result]()
+![result](https://github.com/TianchuangBAI/mini-project/blob/14181767d9826b09ccb718b8d2edcf91308c4a7a/pics/Q3.png)
