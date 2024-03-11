@@ -34,3 +34,6 @@ Here is the result of 1st Version.
 
 Q3 we have two tasks, the first one is visualize and interpret the topic classification result. The second one is improve the accuracy of the topic detction.
 ![result](https://github.com/TianchuangBAI/mini-project/blob/14181767d9826b09ccb718b8d2edcf91308c4a7a/pics/Q3.png)
+
+After the fine-tuning of the model, we have the 2nd Version result.
+![result](https://github.com/TianchuangBAI/mini-project/blob/383ce87fd95de593afb433fc212d9dedfc465475/pics/Q4.jpg)
