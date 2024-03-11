@@ -22,3 +22,6 @@ Q1 is a basic task, we used some libraries like pandas and nltk, as well as spec
 1. Define a fuction which can preprocess the text including the skills like removing the empty values, filters out words starting with "http", "#", etc.
 2. Then we applied the fuction to some fields like 'review_summary','review_advice', etc.
 3. At last, we save the preprocessed data into a new file.
+
+
+Q2
