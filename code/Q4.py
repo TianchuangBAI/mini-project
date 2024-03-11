@@ -58,13 +58,22 @@ chi2_score, p_value = chi2(X, y)
 
 feature_names = tfidf_vectorizer.get_feature_names_out()
 
-sorted_indices = np.argsort(chi2_score)[::-1]
-sorted_features = [feature_names[idx] for idx in sorted_indices]
-print('All topics sorted by correlation with income/wage/salary:')
-for feature in sorted_features:
-    print(feature)
 
 # 获取与收入/工资/薪水最相关的主题
 target_topic_index = np.argmax(chi2_score)
 target_topic = tfidf_vectorizer.get_feature_names_out()[target_topic_index]
 print('Topic most correlated with income/wage/salary:', target_topic)
+
+sorted_indices = np.argsort(chi2_score)[::-1]
+sorted_features = [feature_names[idx] for idx in sorted_indices]
+sorted_scores = chi2_score[sorted_indices]
+
+top_features = sorted_features[:20]
+top_scores = sorted_scores[:20]
+
+plt.figure(figsize=(10, 8))
+plt.barh(top_features, top_scores, color='skyblue')
+plt.xlabel('Chi-squared score')
+plt.ylabel('Top Features')
+plt.title('Top 20 Features by Chi-squared score')
+plt.show()
