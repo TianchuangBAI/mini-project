@@ -1,0 +1,14 @@
+              precision    recall  f1-score   support
+
+       Admin       0.68      0.03      0.07       996
+    Engineer       0.39      0.04      0.08      2062
+     Finance       0.54      0.02      0.04       760
+   Marketing       0.70      0.01      0.02       553
+  Operations       0.74      0.03      0.06       767
+       Sales       0.42      0.07      0.12      2593
+   Scientist       0.48      0.02      0.04       503
+       empty       0.38      0.96      0.55      4987
+
+    accuracy                           0.39     13221
+   macro avg       0.54      0.15      0.12     13221
+weighted avg       0.46      0.39      0.26     13221
