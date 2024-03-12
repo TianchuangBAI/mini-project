@@ -44,3 +44,7 @@ Q4 is a machine learning task to find out which feature is the closed feature to
 I used the TfidfVectorizer to process the text, X = review_pros and y = job_category.
 Then we use chi2_score to calculate the relationship between X and y. Topic most correlated with income/wage/salary: research.
 ![result](https://github.com/TianchuangBAI/mini-project/blob/3be059149bd6fd181320654fba210445c09909db/pics/Q5.png)
+
+
+After we finished the tasks, we tried more ways and angels to analyse this data, we chose the review_summury, review_cons and review_pros to anaylize the data.
+We use the methods we used before and train a model, evaluate the accuracy, find out which is the most related word, all the outcomes and codes we have uploaded in the github, you can see the detial code in the file called "code", and you can find out the outcomes and pictures in the file called "pics".
