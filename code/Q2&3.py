@@ -32,17 +32,14 @@ def train_and_evaluate(df, column_name):
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
     
     nb_classifier = MultinomialNB()
-    # Define parameter grid
     param_grid = {
         'alpha': [0.1, 0.5, 1.0, 1.5, 2.0],
         'fit_prior': [True, False]
     }
 
-    # Use grid search and cross-validation
     grid_search = GridSearchCV(estimator=nb_classifier, param_grid=param_grid, cv=5)
     grid_search.fit(X_train, y_train)
 
-    # Output best parameters
     print(f"Best Parameters for {column_name}:", grid_search.best_params_)
 
     # Use the best parameters classifier for prediction
@@ -51,7 +48,6 @@ def train_and_evaluate(df, column_name):
     accuracy = accuracy_score(y_test, y_pred)
     print(f'Accuracy with best parameters for {column_name}:', accuracy)
 
-    # Output confusion matrix
     conf_matrix = confusion_matrix(y_test, y_pred)
     plt.figure(figsize=(8, 6))
     sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=best_classifier.classes_, yticklabels=best_classifier.classes_)
@@ -61,18 +57,14 @@ def train_and_evaluate(df, column_name):
     plt.savefig(f'confusion_matrix_{column_name}.png')  # Save confusion matrix as an image
     plt.close()
 
-    # Output classification report
     class_report = classification_report(y_test, y_pred, target_names=best_classifier.classes_)
     print(class_report)
 
-    # Save classification report as a text file
     with open(f'classification_report_{column_name}.txt', 'w') as f:
         f.write(class_report)
 
-# Load the data
 df = pd.read_csv('reviews_bsample.csv')
 
-# Train and evaluate for each column
 columns_to_predict = ['review_summary', 'review_advice', 'review_pros', 'review_cons']
 for column in columns_to_predict:
     train_and_evaluate(df, column)
