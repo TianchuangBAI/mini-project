@@ -27,7 +27,7 @@ df['review_pros'] = df['review_pros'].apply(preprocess_text)
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score, classfication_report
+from sklearn.metrics import accuracy_score, classification_report
 
 tfidf_vectorizer = TfidfVectorizer()
 X = tfidf_vectorizer.fit_transform(df['review_pros'])
