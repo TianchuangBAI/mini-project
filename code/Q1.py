@@ -30,5 +30,5 @@ data['review_advice'] = data['review_advice'].apply(preprocess_text)
 data['review_pros'] = data['review_pros'].apply(preprocess_text)
 data['review_cons'] = data['review_cons'].apply(preprocess_text)
 
-processed_file_path = 'processed_reviews.csv'  # 替换为您想保存的文件名
+processed_file_path = 'processed_reviews.csv'  
 data.to_csv(processed_file_path, index=False)
